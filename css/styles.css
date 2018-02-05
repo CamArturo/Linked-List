@@ -53,7 +53,7 @@ h3 {
     float: none;
     margin: 0 auto;
     border: #CFD8DC solid 1px;
-    padding: 1rem;
+    padding: .5rem 1rem;
     font-size: 1.6rem;
 }
 
@@ -66,7 +66,7 @@ h3 {
     color: #fff;
     box-sizing: content-box;
     text-align: center;
-    margin-top: 4.5rem;
+    margin-top: 4rem;
     font-weight: 800;
     padding: 10px 1rem;
 }
@@ -76,7 +76,7 @@ h3 {
 }
 
 .col-1 .bookmark-link {
-    margin-top: 4.5rem;
+    margin-top: 4rem;
 }
 
 .input {
@@ -132,43 +132,80 @@ h3 {
     float: right;
 }
 
+
+
+
 /*MEDIA QUERIES*/
 
-@media screen and (max-width: 400px) {
-    .col-2 {
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (max-device-width: 480px) {
+    h1 {
+        font-size: 8vw;
+        margin: 0.67em 0;
+    }
+    .inner-col {
+        width: 90%;
+    }
+    .input {
+        margin-top: 0;
+    }
+
+    .inner-col input {
+        box-sizing: border-box;
+        padding: 1.5rem;
+        font-size: 3rem;
         width: 100%;
-        display: block;
+    }
+    .inner-col input[type=submit] {
+        box-sizing: border-box;
+        padding: 1.5rem;
+        font-size: 3rem;
     }
 }
 
-@media screen and (max-width: 400px) {
-    .col-1 {
-        width: 100%;
-        display: block;
-    }
-}
 
-@media screen and (max-width: 400px) {
+/* Smartphones to iPad ----------- */
+
+@media only screen and (max-device-width: 767px) {
+    .inner-col input {}
     h1 {
         font-size: 6.0vw;
-        margin-bottom: 30px;
+        margin-bottom: 45px;
     }
-}
 
-@media screen and (max-width: 400px) {
     input[type=text] {
-        font-size: 16px;
-        height: 35px;
-        /*margin-bottom: 2px;*/
+        /*        height: 35px;
+*/
+    }
+
+    .title-container {
+        max-height: initial;
+    }
+
+    .col-1 {
+        height: auto;
+        padding-bottom: 6rem;
+    }
+
+    .col-1,
+    .col-2 {
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 400px) {
-    .delete {
-        position: relative;
-        left: 58%;
-    }
-}
+
+
+
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
+
+
+
+
 
 
 
