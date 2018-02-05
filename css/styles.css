@@ -1,6 +1,5 @@
 html {
     font-family: 'Open Sans', sans-serif;
-    background-color: #455A64;
     font-weight: 400;
 }
 
@@ -31,6 +30,7 @@ h3 {
 .col-2 {
     width: 50%;
     float: left;
+    height: 100vh;
 }
 
 .col-1 {
