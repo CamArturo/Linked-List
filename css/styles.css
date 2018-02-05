@@ -201,20 +201,3 @@ h3 {
 /* iPads (portrait and landscape) ----------- */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
-
-
-
-
-
-
-
-
-/*.box {
-    display: inline-block;
-    background-color: #CFD8DC;
-    height: 100%;
-    width: 50%;
-    border: #607D8B solid 2px;
-    text-align: center;
-}*/
