@@ -140,7 +140,7 @@ h3 {
 
 /* Smartphones (portrait and landscape) ----------- */
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
     h1 {
         font-size: 8vw;
         margin: 0.67em 0;
@@ -168,7 +168,7 @@ h3 {
 
 /* Smartphones to iPad ----------- */
 
-@media only screen and (max-device-width: 767px) {
+@media only screen and (max-width: 767px) {
     .inner-col input {}
     h1 {
         font-size: 6.0vw;
@@ -200,7 +200,9 @@ h3 {
 
 /* iPads (portrait and landscape) ----------- */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    
+}
 
 
 
