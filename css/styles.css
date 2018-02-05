@@ -15,6 +15,10 @@ h3 {
     color: #455A64;
 }
 
+.wrapper {
+    background-color: #CFD8DC;
+}
+
 .title-container {
     max-height: 6vw;
 }
@@ -26,6 +30,15 @@ h3 {
 .col-1,
 .col-2 {
     width: 50%;
+    float: left;
+}
+
+.col-1 {
+    background-color: #455A64;
+}
+
+.col-2 {
+    background-color: #CFD8DC;
 }
 
 .inner-col {
@@ -58,6 +71,10 @@ h3 {
     padding: 10px 1rem;
 }
 
+.inner-col input[type=submit]:hover {
+    background-color: #ffd773;
+}
+
 .col-1 .bookmark-link {
     margin-top: 4.5rem;
 }
@@ -70,8 +87,49 @@ h3 {
     width: 100%;
 }
 
+.list-item {
+    margin: 1rem;
+    border: 1px solid #607d8b;
+    padding: 1rem;
+}
+
+.list-item h2 {
+    margin: 0;
+    color: #455A64;
+}
+
+.list-item hr {
+    color: #cfd8dc;
+}
+
+.list-item .list-item-url {
+    text-decoration-color: #f2f4f4;
+    display: inline-block;
+    margin: 10px 0;
+    color: #607d8b;
+}
+
+.list-item .list-item-url:hover {
+    color: #455a64;
+    font-weight: bold;
+    text-decoration-color: #ffc107;
+}
 
 
+.list-item .action-links {
+    color: #455a64;
+    text-decoration: underline;
+}
+
+.list-item .action-links:hover {
+    color: #455a64;
+    font-weight: bold;
+    text-decoration-color: #ffc107;
+}
+
+.delete-link {
+    float: right;
+}
 
 
 
