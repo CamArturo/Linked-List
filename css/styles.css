@@ -134,13 +134,11 @@ h3 {
 
 
 
-
 /*MEDIA QUERIES*/
 
 
 /* Smartphones (portrait and landscape) ----------- */
-
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width : 480px) {
     h1 {
         font-size: 8vw;
         margin: 0.67em 0;
@@ -155,30 +153,30 @@ h3 {
     .inner-col input {
         box-sizing: border-box;
         padding: 1.5rem;
-        font-size: 3rem;
-        width: 100%;
+            font-size: 3rem;
+            width: 100%;
     }
     .inner-col input[type=submit] {
         box-sizing: border-box;
-        padding: 1.5rem;
+        padding: 2.1rem;
         font-size: 3rem;
     }
 }
 
-
 /* Smartphones to iPad ----------- */
 
 @media only screen and (max-width: 767px) {
-    .inner-col input {}
+    .inner-col input {
+
+    }
     h1 {
         font-size: 6.0vw;
         margin-bottom: 45px;
     }
 
     input[type=text] {
-        /*        height: 35px;
-*/
-    }
+/*        height: 35px;
+*/    }
 
     .title-container {
         max-height: initial;
@@ -186,7 +184,7 @@ h3 {
 
     .col-1 {
         height: auto;
-        padding-bottom: 6rem;
+            padding-bottom: 6rem;
     }
 
     .col-1,
@@ -197,30 +195,8 @@ h3 {
 
 
 
-
 /* iPads (portrait and landscape) ----------- */
 
-<<<<<<< HEAD
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
 }
-
-
-
-
-
-
-
-
-
-/*.box {
-    display: inline-block;
-    background-color: #CFD8DC;
-    height: 100%;
-    width: 50%;
-    border: #607D8B solid 2px;
-    text-align: center;
-}*/
-=======
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
->>>>>>> master
