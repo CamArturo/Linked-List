@@ -151,6 +151,20 @@ h3 {
     text-align: center;
 }
 
+.counter-text {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.counter-column {
+    margin-top: 20px;
+    background-color: #455A64;
+    text-align: center;
+    display: inline-block;;
+
+}
+
 
 /*MEDIA QUERIES*/
 
