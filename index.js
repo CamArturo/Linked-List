@@ -59,6 +59,31 @@ col2.on('click', '.read-link', function () {
   $(this).toggleClass("read");
 });
 
+function countRead() {
+  var counter = 0;
+
+  if 
+  counter++;
+}
+
+function countCurrent() {
+  var counter = 0;
+
+
+  counter++;
+}
+
+function countUnread() {
+  var counter = 0;
+
+
+  counter++;
+}
+
+document.querySelector(".read-links").addEventListener('click', countRead());
+document.querySelector(".current-links").addEventListener('click', countCurrent());
+document.querySelector(".unread-links").addEventListener('click', countUnread());
+
 
 
 // data-attribute - for keeping track of the cards
