@@ -11,7 +11,8 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <!-- <link rel="icon" href="images/.jpg" /> -->
+    <script>window.jQuery || document.write('<script src="path/to/your/jquery.min.js"><\/script>')</script>
+
 </head>
 
 <body class="wrapper">
@@ -21,21 +22,21 @@
                 <div class="title-container">
                     <h1>Linked <img src="logo.svg" alt="Linked List"> List</h1>
                 </div>
-                <input type="text" name="title" placeholder="Website Title">
-                <input type="text" class="bookmark-link" name="bookmark-link" placeholder="Website URL">
-                <input type="submit" id="enter" value="Enter">
+                <input type="text" class="website-title" name="title" placeholder="Website Title">
+                <input type="url" class="bookmark-link" name="bookmark-link" placeholder="Website URL">
+                <input type="submit" id="enter" value="Enter" disabled>
             </form>
         </div>
     </div>
     <div class="col-2">
-        <article class="list-item">
-            <h2>The Website Title</h2>
-            <hr>
-            <a href="" class="list-item-url">www.thewebsiteurl.com</a>
-            <hr>
-            <a class="action-links">Read</a>
-            <a class="action-links delete-link">Delete</a>
-        </article>
+        <!--<article class="bookmark">-->
+            <!--<h2>The Website Title</h2>-->
+            <!--<hr>-->
+            <!--<a href="" class="bookmark-url">www.thewebsiteurl.com</a>-->
+            <!--<hr>-->
+            <!--<a class="action-links read-link">Read</a>-->
+            <!--<a class="action-links delete-link">Delete</a>-->
+        <!--</article>-->
     </div>
     <script type="text/javascript" src="index.js"></script>
 </body>

@@ -55,6 +55,7 @@ h3 {
     border: #CFD8DC solid 1px;
     padding: .5rem 1rem;
     font-size: 1.6rem;
+    border-radius: 5px;
 }
 
 .inner-col input::placeholder {
@@ -75,6 +76,10 @@ h3 {
     background-color: #ffd773;
 }
 
+.inner-col input[type="submit"]:disabled {
+    background-color: #ffd773;
+}
+
 .col-1 .bookmark-link {
     margin-top: 4rem;
 }
@@ -87,42 +92,42 @@ h3 {
     width: 100%;
 }
 
-.list-item {
+.bookmark {
     margin: 1rem;
     border: 1px solid #607d8b;
     padding: 1rem;
     background-color: #fff;
 }
 
-.list-item h2 {
+.bookmark h2 {
     margin: 0;
     color: #455A64;
 }
 
-.list-item hr {
+.bookmark hr {
     color: #cfd8dc;
 }
 
-.list-item .list-item-url {
+.bookmark .bookmark-url {
     text-decoration-color: #f2f4f4;
     display: inline-block;
     margin: 10px 0;
     color: #607d8b;
 }
 
-.list-item .list-item-url:hover {
+.bookmark .bookmark-url:hover {
     color: #455a64;
     font-weight: bold;
     text-decoration-color: #ffc107;
 }
 
 
-.list-item .action-links {
+.bookmark .action-links {
     color: #455a64;
     text-decoration: underline;
 }
 
-.list-item .action-links:hover {
+.bookmark .action-links:hover {
     color: #455a64;
     font-weight: bold;
     text-decoration-color: #ffc107;
@@ -132,7 +137,16 @@ h3 {
     float: right;
 }
 
+.bookmark .read {
+    color: #F05A28;
+    font-weight: bold;
+}
 
+.bookmark.read {
+    background-color: #F2F4F4;
+    text-decoration-color: #cfd8dc;
+    background-color: #f2f4f4;
+}
 
 
 /*MEDIA QUERIES*/
@@ -202,4 +216,3 @@ h3 {
     .col-2 {
         height: 100%;
     }
-}
