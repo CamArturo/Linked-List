@@ -161,8 +161,16 @@ h3 {
     margin-top: 20px;
     background-color: #455A64;
     text-align: center;
-    display: inline-block;;
+    display: inline-block;
+    border-left: solid 2px white;
+}
 
+.clear-readbtn {
+    margin-top: 20px ;
+    border: 1px solid #CFD8DC;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #FFC107;
 }
 
 

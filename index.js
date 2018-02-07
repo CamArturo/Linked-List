@@ -4,6 +4,7 @@ var enterBtn = $('#enter');
 var col2 = $('.col-2');
 var articleCounter = 0;
 var readCounter = 0;
+var unreadCounter;
 
 $(window).keydown(function(event) {
     if (event.keyCode == 13) {
@@ -30,7 +31,7 @@ col2.on('click', '.read-link', function() {
     $(this).toggleClass("read");
     console.log(event);
     updateReadCount(event);
-    countUnread(event);
+    countUnread();
 });
 
 enterBtn.on("click", function(event) {
@@ -78,28 +79,30 @@ function countCurrent() {
 
 function reduceCounter() {
     articleCounter--;
+    $('.current-links').text(articleCounter);
     console.log(articleCounter);
 }
 
 function updateReadCount(theWholeEvent) {
-  if($(event.target).hasClass("read")) {
-      readCounter++;
-      $('.read-links').text(readCounter);
+    if ($(event.target).hasClass("read")) {
+        readCounter++;
+        $('.read-links').text(readCounter);
     } else {
-      readCounter--;
-      $('.read-links').text(readCounter);
+        readCounter--;
+        $('.read-links').text(readCounter);
     }
 }
 
-function countUnread(event) {
-    if(!$(event.target).hasClass("read")) {
-      readCounter--;
-      $('.unread-links').text(readCounter);
-    } else {
-      readCounter++;
-      $('.unread-links').text(readCounter);
-    }
+function countUnread() {
+    unreadCounter = articleCounter - readCounter;
+    $('.unread-links').text(unreadCounter);
 }
 
+//when error shows, enable enter button again
+//add enter button back
+//disable enter button if any input fields are empty
+
+//add clear bookmarks button - clears all read bookmarks
+//make url input valid - otherwise show error
 
 // data-attribute - for keeping track of the cards
