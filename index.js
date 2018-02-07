@@ -18,19 +18,24 @@ $(websiteURL).on('keyup', function () {
   }
 });
 
+function errorMessage() {
+  if($('.error-message').children().length === 0) {
+    $('.error-message').append("<p>Please enter a title and valid URL</p>")
+  }
+}
+
 function checkInput() {
-  console.log('checking');
   var websiteTitleValue = websiteTitle.val();
   var websiteURLValue = websiteURL.val();
   if (websiteTitleValue !== '' && websiteURLValue !== '') {
     enterBtn.attr("disabled", false);
   } else {
     enterBtn.attr("disabled", true);
+    errorMessage();
     return;
   }
   return [websiteTitleValue, websiteURLValue];
 }
-
 
 enterBtn.on("click", function (event) {
   event.preventDefault();
@@ -58,7 +63,5 @@ col2.on('click', '.read-link', function () {
   $(this).parent('article').toggleClass("read");
   $(this).toggleClass("read");
 });
-
-
 
 // data-attribute - for keeping track of the cards
