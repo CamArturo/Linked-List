@@ -142,15 +142,6 @@ h3 {
     font-weight: bold;
 }
 
-.bookmark.read {
-    background-color: #F2F4F4;
-    text-decoration-color: #cfd8dc;
-    background-color: #f2f4f4;
-}
-
-
-
-
 /*MEDIA QUERIES*/
 
 /* iPads (portrait and landscape) ----------- */
@@ -218,4 +209,3 @@ h3 {
     .col-2 {
         height: 100%;
     }
-}
