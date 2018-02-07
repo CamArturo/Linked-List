@@ -6,9 +6,8 @@ html {
 
 /* remember to define focus styles! */
 :focus {
-outline: 0;
+    outline: 0;
 }
-
 
 h1 {
     font-size: 5vw;
@@ -128,7 +127,6 @@ h3 {
     text-decoration-color: #ffc107;
 }
 
-
 .bookmark .action-links {
     color: #455a64;
     text-decoration: underline;
@@ -158,6 +156,11 @@ h3 {
     text-align: center;
 }
 
+.counter-container {
+    width: 66%;
+    margin: 4rem auto;
+}
+
 .counter-text {
     text-align: center;
     color: white;
@@ -165,7 +168,6 @@ h3 {
 }
 
 .counter-column {
-    margin-top: 20px;
     background-color: #455A64;
     text-align: center;
     display: inline-block;
@@ -174,11 +176,17 @@ h3 {
 }
 
 .clear-readbtn {
-    margin-top: 20px ;
     border: 1px solid #CFD8DC;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
-    background-color: #FFC107;
+    background-color: #ffc107;
+    color: #fff;
+    font-weight: 800;
+    width: 87%;
+    margin: 4rem auto 2rem;
+    display: block;
+    padding: 10px 1rem;
+    box-sizing: content-box;
 }
 
 .counter-column-1 {
@@ -206,7 +214,7 @@ h3 {
         margin-top: 10%;
     }
 
-  .col-1 .bookmark-link {
+    .col-1 .bookmark-link {
         margin-top: 10%;
     }
 
