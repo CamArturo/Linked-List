@@ -55,6 +55,7 @@ h3 {
     border: #CFD8DC solid 1px;
     padding: .5rem 1rem;
     font-size: 1.6rem;
+    border-radius: 5px;
 }
 
 .inner-col input::placeholder {
@@ -75,6 +76,10 @@ h3 {
     background-color: #ffd773;
 }
 
+.inner-col input[type="submit"]:disabled {
+    background-color: #ffd773;
+}
+
 .col-1 .bookmark-link {
     margin-top: 4rem;
 }
@@ -87,42 +92,42 @@ h3 {
     width: 100%;
 }
 
-.list-item {
+.bookmark {
     margin: 1rem;
     border: 1px solid #607d8b;
     padding: 1rem;
     background-color: #fff;
 }
 
-.list-item h2 {
+.bookmark h2 {
     margin: 0;
     color: #455A64;
 }
 
-.list-item hr {
+.bookmark hr {
     color: #cfd8dc;
 }
 
-.list-item .list-item-url {
+.bookmark .bookmark-url {
     text-decoration-color: #f2f4f4;
     display: inline-block;
     margin: 10px 0;
     color: #607d8b;
 }
 
-.list-item .list-item-url:hover {
+.bookmark .bookmark-url:hover {
     color: #455a64;
     font-weight: bold;
     text-decoration-color: #ffc107;
 }
 
 
-.list-item .action-links {
+.bookmark .action-links {
     color: #455a64;
     text-decoration: underline;
 }
 
-.list-item .action-links:hover {
+.bookmark .action-links:hover {
     color: #455a64;
     font-weight: bold;
     text-decoration-color: #ffc107;
@@ -132,58 +137,32 @@ h3 {
     float: right;
 }
 
+.bookmark .read {
+    color: #F05A28;
+    font-weight: bold;
+}
+
+.bookmark.read {
+    background-color: #F2F4F4;
+    text-decoration-color: #cfd8dc;
+    background-color: #f2f4f4;
+}
+
 
 
 
 /*MEDIA QUERIES*/
 
+/* iPads (portrait and landscape) ----------- */
 
-/* Smartphones (portrait and landscape) ----------- */
-<<<<<<< HEAD
+@media only screen and (min-width: 768px) and (max-device-width: 1024px) {
 
-@media only screen and (max-width: 480px) {
-    html h1 {
-        font-size: 10vw;
-=======
-@media only screen and (max-width: 480px) {
-    h1 {
-        font-size: 8vw;
->>>>>>> master
-        margin: 0.67em 0;
-    }
-    .inner-col {
-        width: 90%;
-    }
-    .input {
-        margin: 0;
-    }
-
-    .inner-col input {
-        box-sizing: border-box;
-        font-size: 2rem;
-        width: 100%;
-    }
-    .inner-col input[type=submit] {
-        box-sizing: border-box;
-        font-size: 1.5rem;
-    }
-
-    .col-2 {
-        height: 100%;
-    }
 }
-
 
 /* Smartphones to iPad ----------- */
 
 @media only screen and (max-width: 767px) {
-<<<<<<< HEAD
-    .inner-col input {
 
-    }
-
-=======
->>>>>>> master
     h1 {
         font-size: 6.0vw;
         margin-bottom: 45px;
@@ -212,15 +191,31 @@ h3 {
     }
 }
 
+/* Smartphones (portrait and landscape) ----------- */
 
+@media only screen and (max-width: 480px) {
+    html h1 {
+        font-size: 10vw;
+        margin: 0.67em 0;
+    }
+    .inner-col {
+        width: 90%;
+    }
+    .input {
+        margin: 0;
+    }
 
+    .inner-col input {
+        box-sizing: border-box;
+        font-size: 2rem;
+        width: 100%;
+    }
+    .inner-col input[type=submit] {
+        box-sizing: border-box;
+        font-size: 1.5rem;
+    }
 
-<<<<<<< HEAD
-/* iPads (portrait and landscape) ----------- */
-
-@media only screen and (min-width: 768px) and (max-device-width: 1024px) {}
-=======
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-
+    .col-2 {
+        height: 100%;
+    }
 }
->>>>>>> master
