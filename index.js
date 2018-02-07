@@ -6,14 +6,7 @@ var articleCounter = 0;
 var readCounter = 0;
 var unreadCounter;
 
-$(window).keydown(function(event) {
-    if (event.keyCode == 13) {
-        event.preventDefault();
-        return false;
-    }
-});
-
-$(websiteURL).on('keyup', function() {
+$(".website-title, .bookmark-link").on('keyup', function() {
     var websiteTitleValue = websiteTitle.val();
     var websiteURLValue = websiteURL.val();
     if (websiteTitleValue !== '' && websiteURLValue !== '') {
@@ -24,12 +17,12 @@ $(websiteURL).on('keyup', function() {
 col2.on("click", '.delete-link', function() {
     $(this).parent('article').remove();
     reduceCounter();
+    updateReadCount();
 });
 
 col2.on('click', '.read-link', function() {
-    $(this).parent('article').toggleClass("read");
+    // $(this).parent('article').toggleClass("read");
     $(this).toggleClass("read");
-    console.log(event);
     updateReadCount(event);
     countUnread();
 });
@@ -41,9 +34,11 @@ enterBtn.on("click", function(event) {
     var websiteTitleValue = values[0];
     var websiteURLValue = values[1];
 
-    $(".col-2").append("<article class='bookmark'><h2>" + websiteTitleValue + "</h2><hr><a href=https://" + websiteURLValue + "  target='_blank' class='bookmark-url'> " + websiteURLValue + "</a><hr><a class='action-links read-link'>Read</a><a class=\"action-links delete-link\">Delete</a></article>");
+    col2.append("<article class='bookmark'><h2>" + websiteTitleValue + "</h2><hr><a href=https://" + websiteURLValue + "  target='_blank' class='bookmark-url'> " + websiteURLValue + "</a><hr><a class='action-links read-link'>Read</a><a class=\"action-links delete-link\">Delete</a></article>");
     websiteTitle.focus();
+    enterBtn.attr("disabled", true);
     countCurrent();
+    countUnread();
     clearInput();
 });
 
@@ -84,13 +79,8 @@ function reduceCounter() {
 }
 
 function updateReadCount(theWholeEvent) {
-    if ($(event.target).hasClass("read")) {
-        readCounter++;
-        $('.read-links').text(readCounter);
-    } else {
-        readCounter--;
-        $('.read-links').text(readCounter);
-    }
+    readCounter = $('.read').length;
+    $('.read-links').text(readCounter);
 }
 
 function countUnread() {
@@ -98,10 +88,8 @@ function countUnread() {
     $('.unread-links').text(unreadCounter);
 }
 
-//when error shows, enable enter button again
-//add enter button back
-//disable enter button if any input fields are empty
 
+//when error shows, enable enter button again
 //add clear bookmarks button - clears all read bookmarks
 //make url input valid - otherwise show error
 
