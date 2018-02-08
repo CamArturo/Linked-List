@@ -111,7 +111,7 @@ function reduceCounter() {
   $('.current-links').text(articleCounter);
 }
 
-function updateReadCount(theWholeEvent) {
+function updateReadCount(event) {
   readCounter = $('.read').length;
   $('.read-links').text(readCounter);
 }
