@@ -73,7 +73,7 @@ h3 {
     color: #fff;
     box-sizing: content-box;
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
     font-weight: 800;
     padding: 10px 1rem;
 }
@@ -182,10 +182,10 @@ h3 {
     background-color: #ffc107;
     color: #fff;
     font-weight: 800;
-    width: 87%;
+    width: 55%;
     margin: 4rem auto 2rem;
     display: block;
-    padding: 10px 1rem;
+    padding: 6px 1rem;
     box-sizing: content-box;
 }
 
