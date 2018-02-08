@@ -25,7 +25,7 @@ enterBtn.on("click", function(event) {
     var websiteTitleValue = websiteTitle.val();
     var websiteURLValue = websiteURL.val();
 
-    col2.append("<article class='bookmark'><h2>" + websiteTitleValue + "</h2><hr><a href=https://" + websiteURLValue + "  target='_blank' class='bookmark-url'> " + websiteURLValue + "</a><hr><a class='action-links read-link'>Read</a><a class=\"action-links delete-link\">Delete</a></article>");
+    col2.append("<article class='bookmark'><h2>" + websiteTitleValue + "</h2><hr><a href=" + websiteURLValue + "  target='_blank' class='bookmark-url'> " + websiteURLValue + "</a><hr><a class='action-links read-link'>Read</a><a class=\"action-links delete-link\">Delete</a></article>");
     websiteTitle.focus();
     enterBtn.attr("disabled", true);
     countCurrent();
@@ -34,7 +34,19 @@ enterBtn.on("click", function(event) {
 });
 
 function errorMessage() {
-        $('.error-message p').html("Please enter a title and valid URL")
+        $('.error-message p').html("Please enter a title and valid URL (with https://)")
+}
+
+function validURL() {
+    var urlValid = new RegExp("^http(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]*)?$");
+    var websiteURLValue = websiteURL.val();   
+
+    if(!urlValid.test(websiteURLValue)) {
+        console.log('hello');
+        return false;
+    } else {
+        return true;
+    }
 }
 
 function checkInput() {
@@ -44,10 +56,14 @@ function checkInput() {
         enterBtn.attr("disabled", true);
         errorMessage();
     } else {
+        var valid = validURL();
+        console.log('hello');
+        if (valid) {
         enterBtn.attr("disabled", false);
         $('.error-message p').html('&nbsp;');
         console.log($('.error-message p'));
         return;
+        }
     }
     return [websiteTitleValue, websiteURLValue];
 }
@@ -78,8 +94,6 @@ function countUnread() {
     unreadCounter = articleCounter - readCounter;
     $('.unread-links').text(unreadCounter);
 }
-
-
 //add clear bookmarks button - clears all read bookmarks
 //make url input valid - otherwise show error
 
