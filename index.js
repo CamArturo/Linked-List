@@ -3,6 +3,7 @@ var websiteURL = $(".bookmark-link");
 var enterBtn = $('#enter');
 var errorMessageText = $('.error-message p');
 var col2 = $('.col-2');
+var col1 = $('.col-1');
 var articleCounter = 0;
 var readCounter = 0;
 
@@ -16,6 +17,12 @@ col2.on('click', '.read-link', function () {
 
 col2.on('click', '.delete-link', function () {
   $(this).parent('article').remove();
+  reduceCounter();
+  updateReadCount();
+});
+
+col1.on('click', '.clear-readbtn', function () {
+  $('.read').parent('article').remove();
   reduceCounter();
   updateReadCount();
 });
