@@ -6,13 +6,7 @@ var articleCounter = 0;
 var readCounter = 0;
 var unreadCounter;
 
-$(".website-title, .bookmark-link").on('keyup', function() {
-    var websiteTitleValue = websiteTitle.val();
-    var websiteURLValue = websiteURL.val();
-    if (websiteTitleValue !== '' && websiteURLValue !== '') {
-        enterBtn.attr("disabled", false);
-    }
-});
+$(".website-title, .bookmark-link").on('keyup', checkInput);
 
 col2.on("click", '.delete-link', function() {
     $(this).parent('article').remove();
@@ -21,7 +15,6 @@ col2.on("click", '.delete-link', function() {
 });
 
 col2.on('click', '.read-link', function() {
-    // $(this).parent('article').toggleClass("read");
     $(this).toggleClass("read");
     updateReadCount(event);
     countUnread();
@@ -29,10 +22,8 @@ col2.on('click', '.read-link', function() {
 
 enterBtn.on("click", function(event) {
     event.preventDefault();
-
-    var values = checkInput();
-    var websiteTitleValue = values[0];
-    var websiteURLValue = values[1];
+    var websiteTitleValue = websiteTitle.val();
+    var websiteURLValue = websiteURL.val();
 
     col2.append("<article class='bookmark'><h2>" + websiteTitleValue + "</h2><hr><a href=https://" + websiteURLValue + "  target='_blank' class='bookmark-url'> " + websiteURLValue + "</a><hr><a class='action-links read-link'>Read</a><a class=\"action-links delete-link\">Delete</a></article>");
     websiteTitle.focus();
@@ -43,19 +34,19 @@ enterBtn.on("click", function(event) {
 });
 
 function errorMessage() {
-    if ($('.error-message').children().length === 0) {
-        $('.error-message').append("<p>Please enter a title and valid URL</p>")
-    }
+        $('.error-message p').html("Please enter a title and valid URL")
 }
 
 function checkInput() {
     var websiteTitleValue = websiteTitle.val();
     var websiteURLValue = websiteURL.val();
-    if (websiteTitleValue !== '' && websiteURLValue !== '') {
-        enterBtn.attr("disabled", false);
-    } else {
+    if (websiteTitleValue === '' || websiteURLValue === '') {
         enterBtn.attr("disabled", true);
         errorMessage();
+    } else {
+        enterBtn.attr("disabled", false);
+        $('.error-message p').html('&nbsp;');
+        console.log($('.error-message p'));
         return;
     }
     return [websiteTitleValue, websiteURLValue];
@@ -89,7 +80,6 @@ function countUnread() {
 }
 
 
-//when error shows, enable enter button again
 //add clear bookmarks button - clears all read bookmarks
 //make url input valid - otherwise show error
 

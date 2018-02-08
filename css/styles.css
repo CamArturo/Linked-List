@@ -189,6 +189,10 @@ h3 {
     box-sizing: content-box;
 }
 
+.clear-readbtn:hover {
+    background-color: #ffd773;
+}
+
 .counter-column-1 {
     border: none;
 }
@@ -252,7 +256,7 @@ h3 {
     .inner-col input {
         box-sizing: border-box;
         font-size: 2rem;
-        width: 100vh;
+        width: 100%;
     }
 
     .inner-col input[type=submit] {
