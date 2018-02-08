@@ -21,24 +21,6 @@ col2.on('click', '.delete-link', function () {
 });
 
 enterBtn.on('click', function (event) {
-var errorMessageText = $('.error-message p');
-var unreadCounter;
-
-$(".website-title, .bookmark-link").on('keyup', checkInput);
-
-col2.on("click", '.delete-link', function () {
-  $(this).parent('article').remove();
-  reduceCounter();
-  updateReadCount();
-});
-
-col2.on('click', '.read-link', function () {
-  $(this).toggleClass("read");
-  updateReadCount(event);
-  countUnread();
-});
-
-enterBtn.on("click", function (event) {
   event.preventDefault();
   var websiteTitleValue = websiteTitle.val();
   var websiteURLValue = websiteURL.val();
@@ -57,11 +39,6 @@ function errorMessage() {
 
 function validURL() {
   // https://gist.github.com/dperini/729294
-  errorMessageText.html("Please enter a title and valid URL")
-}
-
-function validURL() {
-  // var urlValid = new RegExp("^http(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]*)?$");
   var urlValid = new RegExp(
     "^" +
     // protocol identifier
@@ -117,7 +94,6 @@ function checkInput() {
     }
   }
   // return [websiteTitleValue, websiteURLValue];
-  return [websiteTitleValue, websiteURLValue];
 }
 
 function clearInput() {
@@ -128,13 +104,11 @@ function clearInput() {
 function countCurrent() {
   articleCounter++;
   $('.current-links').text(articleCounter);
-  console.log(articleCounter);
 }
 
 function reduceCounter() {
   articleCounter--;
   $('.current-links').text(articleCounter);
-  console.log(articleCounter);
 }
 
 function updateReadCount(theWholeEvent) {
@@ -144,10 +118,10 @@ function updateReadCount(theWholeEvent) {
 
 function countUnread() {
   var unreadCounter = articleCounter - readCounter;
-  unreadCounter = articleCounter - readCounter;
   $('.unread-links').text(unreadCounter);
 }
 
 //add clear bookmarks button - clears all read bookmarks
+//make url input valid - otherwise show error
 
 // data-attribute - for keeping track of the cards
